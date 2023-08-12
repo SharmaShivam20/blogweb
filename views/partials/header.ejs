@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Trendy Blogs</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+
+  <script>
+    require([
+      'froala-editor',
+      'froala-editor/js/plugins/align.min'
+    ], function(FroalaEditor) {
+      new FroalaEditor('#edit')
+    });
+</script>
+
+  <!-- CSS CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.css">
+
+  <!-- Editor JS -->
+  <script src="require.js"></script>
+  <script>
+    require.config({
+      packages: [{
+        name: 'froala-editor',
+        main: 'js/froala_editor.min'
+      }],
+      paths: {
+        // Change this to your server if you do not wish to use our CDN.
+        'froala-editor': 'https://cdn.jsdelivr.net/npm/froala-editor@latest'
+      }
+    });
+  </script>
+
+  <!-- Editor Style -->
+  <style>
+    #editor {
+      width: 81%;
+      margin: auto;
+      text-align: left;
+      height:200px;
+    }
+
+    #edit{
+      height:100px;
+    }
+  </style>
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- <img style="width:10%; height:10%;" src="/images/trendy-blogs-logo.png" alt=""> -->
+        <p style="margin-left: 5rem;" class="navbar-brand"><span style="color:#8D72E1;">TRENDY</span> <span style="color:#8D9EFF;">BLOGS</span></p>
+        
+      </div>
+        <ul style="margin-right: 5rem;" class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/">HOME</a></li>
+          <li id="about"><a href="/about">ABOUT US</a></li>
+          <li id="contact"><a href="/contact">CONTACT US</a></li>
+          <li id="compose"><a href="/compose">CREATE POST</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
