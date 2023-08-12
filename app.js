@@ -17,7 +17,7 @@ app.use(express.static("public"));
 mongoose.set("strictQuery", true);
 
 //Your MongoDB connection string here.
-mongoose.connect('mongodb+srv://shivshubham:shiv123shubham@cluster0.8yx6uw8.mongodb.net/blogwebsite', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true});
 
 const postSchema = new mongoose.Schema({
   title:String,
