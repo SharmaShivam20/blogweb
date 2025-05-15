@@ -68,14 +68,23 @@ app.get("/compose", function(req,res){
   res.render("compose");
 })
 
-app.get("/posts/:topic",function(req,res){
-
+app.get("/posts/:topic", function(req, res) {
   const requestedId = req.params.topic;
 
-  Post.findOne({_id:requestedId}, function(err, found){
-      res.render("post",{postTitle:found.title, postBody:found.body, postImage:found.image});
-  })
-})
+  Post.findOne({ _id: requestedId }, function(err, found) {
+      if (err) {
+          res.status(500).send("An error occurred while fetching the post.");
+      } else if (!found) {
+          res.status(404).send("Post not found."); // Handle the case where no post is found
+      } else {
+          res.render("post", {
+              postTitle: found.title,
+              postBody: found.body,
+              postImage: found.image
+          });
+      }
+  });
+});
 
 app.post("/compose",upload,function(req,res){
   
